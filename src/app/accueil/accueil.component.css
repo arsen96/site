@@ -1,0 +1,371 @@
+.menuContainer{
+    display: flex;
+    height: 100px;
+    grid-gap:5px;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menuContainer p{
+    margin: 0px;
+    font-size: calc(0.6vw + 0.6vh);
+    font-weight: bold;
+}
+
+
+
+.isMobile :host .menuContainer p{
+    font-size: calc(.8vw + .8vh);    
+}
+
+
+.bannerContainer{
+    display:flex;
+    justify-content: space-between;
+}
+
+.leftBanner{
+    background-color: #140a82;
+    /* background-image:url("https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); */
+}
+
+.isBanner{
+    height: 220px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    width: 47%;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: calc(1.05vw + 1.05vh);
+    font-weight: bold;
+}
+
+.bannerContent{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.bannerLogo{
+    display: flex;
+    height: 40px;
+    margin-right: auto;
+    margin-left: 5%;
+}
+
+.bannerContent p{
+    font-size: calc(.8rem + .65vw);
+}
+
+
+.bannerLogo img{
+    filter: invert(1);
+}
+
+.bannerContent p{
+    margin:0px;
+    color: white;
+    margin-right: auto;
+}
+
+.rightBanner{
+    background-image:url("https://images.unsplash.com/photo-1571260899304-425eee4c7efc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.stepPrestation{
+    margin-top: 40px;
+}
+
+.cardContainer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+
+.card:hover {
+    background-color: rgba(255, 255, 255, 0.253);
+    box-shadow: 10px 10px 0px 0px rgb(82, 82, 82);
+    transform: translate(-5px, -5px);
+    transition: 600ms;
+}
+
+.card h4{
+    font-size: calc(.8rem + .25vw);
+    font-weight: bold;
+    margin:0px;
+}
+
+.card p{
+    font-size: calc(.7rem + .25vw);
+}
+
+.offeredSoluionsContainer{
+    display: flex;
+    margin-top: 40px;
+    outline: 0;
+    height: 500px;
+    border-left: 10px solid #F7F6FE;
+}
+
+.leftContainer_solutions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+    width: 55%;
+    margin-left:3%;
+}
+
+
+
+.titleContainer_solutions small{
+    color:grey;
+}
+
+.linksContainer_solutions,
+.titleContainer_solutions{
+    width: 95%;
+}
+
+.linksContainer_solutions{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.titleContainer_solutions p{
+    margin:5% 0px;
+}
+.rightContainer_solutions{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.rightContainer_solutions .nextElement{
+    position: absolute;
+    right:10px;
+    display: flex;
+    gap: 5px;
+    height: 60px;
+    width: 60px;
+}
+
+.nextElement svg{
+    fill:white;
+    width: 100%;
+    height: 100%;
+}
+
+.nextElement svg{
+    cursor: pointer;
+}
+
+
+
+.rightContainer_solutions img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position:relative;
+}
+.rightContainer_solutions img:before{
+   position: absolute;
+   content:"";
+   background:red;
+}
+
+
+mat-expansion-panel-header{
+    margin:3% 0px!important;
+    width: fit-content;
+    height: 30px!important;
+}
+mat-accordion{
+    width: fit-content;
+    display: flex;
+}
+
+mat-expansion-panel{
+    box-shadow: none!important;
+    width: fit-content;
+    font-size:1em;
+    width: 50%;
+}
+mat-panel-title p{
+    font-size: .85em;
+}
+
+::ng-deep .mat-expansion-indicator{
+    position: absolute;
+    left: 3px;
+    transform: rotate(-90deg)!important;
+}
+
+
+
+::ng-deep mat-expansion-panel.mat-expanded  .mat-expansion-indicator{
+    transform: rotate(0deg)!important
+}
+
+.fullWidth {
+    width: 50%;
+    display:flex;
+}
+
+::ng-deep .expansionSelected{
+    border: 1px solid transparent;
+    background: #F3F2FA!important;
+    border-radius: 25px!important;
+    width: fit-content;
+}
+
+.stepFiguresContainer{
+    margin-top:40px;
+}
+
+
+
+.info{
+    display:flex;
+    align-items: center;
+    gap:5px;
+}
+
+
+
+.border_figures{
+    height: 1px;
+    border: 1px solid white;
+    width: 35%;
+}
+
+.ecoconceptionContainer{
+    display:flex;
+    gap:10%;
+    margin-top:7%;
+}
+
+
+.conceptionLeftContainer{
+    width: 50%;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.conceptionLeftContainer img{
+    width: 100%;
+}
+
+.conceptionRightContainer{
+    width: 50%;
+}
+
+.paragraph_conception{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.button_conception{
+    width: 100%;
+    padding: 5px;
+    height: 70px;
+    background-color: #F7F6FE;
+    border-radius: 10px;
+    align-items: center;
+    display:flex;
+    justify-content: space-between;
+    padding: 5%;
+}
+
+.button_conception button{
+    background: #140B82;
+}
+
+.economieContainer{
+    width: 250px;
+    height: 110px;
+    position: absolute;
+    background: white;
+    bottom: -10px;
+    border-radius: 10px;
+    box-shadow: 2px 3px 12px 1px rgba(0,0,0,0.3);
+    left:-90px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:30px;
+}
+
+.economieFooter{
+    display:flex;
+    align-items: center;
+    gap:5px;
+}
+
+.economieFooter svg{
+    fill:green;
+}
+
+.dividerFooterBody{
+    width: 95%;
+    margin: 7% auto;
+    height: 1px;
+    background-color: #C0BDCE;
+}
+
+
+.discoverCard{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px;
+    border:none;
+}
+
+.discoverTextContainer{
+    position: absolute;
+    bottom: 10%;
+    padding-left: 5%;
+    width: 65%;
+}
+
+.discoverTextContainer h2,.discoverTextContainer p,
+.discoverTextContainer button{
+    color:white;
+}
+
+.disoverCardsContainer{
+    display:flex;
+    justify-content: space-between;
+}
+
+.discoverCard img{
+    border-radius: 15px;
+}
+
+.discoverTitle{
+    font-size: calc(1.1rem + 0.4vw)!important;
+}
+
+.discoverTextContainer button{
+    background-color: #FF5A1C;
+}
+
+.dividerFooter{
+    width: 100%;
+    margin: 2% auto;
+    height: 1px;
+    background-color: #C0BDCE;
+}

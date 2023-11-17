@@ -1,0 +1,19 @@
+app-footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+
+
+::ng-deep .addPadding{
+    width: 95%!important;
+    margin: auto;
+}
+
+app-header{
+    /* display: flex;
+    height: 100px; */
+}
+

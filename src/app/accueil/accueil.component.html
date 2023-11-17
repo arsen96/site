@@ -1,0 +1,158 @@
+<app-caroussel [images]="['https://picsum.photos/id/1/1900/1000','../../assets/second.jpg']" [options]="{'showNavigationArrows':true,'showNavigationIndicators':false}"></app-caroussel>
+<div class="addPadding">
+    <div class="menuContainer">
+        <p>Flux documentaires</p>
+        <p>Studio de développement</p>
+        <p>L'atelier numérique</p>
+        <p>Livraison urbaine</p>
+        <p>Service postal</p>
+        <p>Conciergerie d'entreprise</p>
+        <p>Formations</p>
+    </div>
+
+    <div class="bannerContainer">
+        <div class="leftBanner isBanner">
+            <div class="bannerContent">
+                <div class="bannerLogo">
+                    <img src="../../assets/logo-step.png" class="logo" alt="">
+                </div>
+                <p>Studio de<br> Développement</p>
+            </div>
+        </div>
+        <div class="rightBanner isBanner">
+            <div class="bannerContent">
+                <div class="bannerLogo">
+                    <img src="../../assets/logo-step.png" class="logo" alt="">
+                </div>
+                <p>Centre<br> de formation</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="stepPrestation">
+        <h2 class="sectionTitle">
+            <img src="../../assets/logo-step.png" class="logo" width="90" height="70" alt="">  <strong> c'est quoi ?</strong>
+        </h2>
+        <div class="cardContainer">
+            <div class="card" *ngFor="let content of stepServices">
+                <div class="iconContainer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chat-right" viewBox="0 0 16 16">
+                        <path d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z"/>
+                      </svg>
+                </div>
+                <h4>{{content.title}}</h4>
+                <p>{{content.paragraphe}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="offeredSoluionsContainer">
+        <div class="leftContainer_solutions">
+            <div class="titleContainer_solutions">
+                <h2> <strong>Des solutions<br/>
+                    & métiers adaptés à<br/>
+                   tous vos besoins</strong>
+                </h2>
+                <p><small>Lorem ipsum dolor sit, amet consectetur adipisicing.</small></p>
+            </div>
+
+            <div class="linksContainer_solutions">
+                <ng-container *ngFor="let link of linksContent,let i=index;">
+                        <mat-expansion-panel (click)="openSolutionLinks(i)"   #expansionPanels >
+                            <mat-expansion-panel-header class="selection">
+                              <mat-panel-title>
+                                <p class="m-0"><strong>{{link.title}}</strong></p>
+                              </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <p class="m-0"><small>{{link.content}}</small></p>
+                          </mat-expansion-panel>
+                </ng-container>
+                   
+            </div>
+        </div>
+        <div class="rightContainer_solutions">
+            <img [src]="'https://picsum.photos/id/' + idSolutionImg + '/500/600'" alt="">
+            <div class="nextElement">
+                <div class="next" (click)="changeSelection(false)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z"/>
+                   </svg>
+                </div>
+                <div class="prev" (click)="changeSelection(true)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
+                      </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="stepFiguresContainer">
+        <app-counter [allNumbers]="[20000,150000,100000]"></app-counter>
+    </div>
+
+    <div class="ecoconceptionContainer">
+        <div class="conceptionLeftContainer">
+            <img src="https://picsum.photos/id/1/1000/700">
+            <div class="economieContainer switchDarkMode" *ngIf="globalService.isDesktop">
+                    <p class="mb-0">Jusqu'à</p>
+                    <h2 class="mb-0">90%</h2>
+                    <div class="economieFooter">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"/>
+                          </svg>
+                        <p class="mb-0"><small>D'économie d'énergie</small></p>
+                    </div>
+            </div>
+        </div>
+
+        <div class="conceptionRightContainer">
+            <div class="title_conception">
+                <h1><strong>L'écoconception au centre de nos démarches</strong></h1>
+            </div>
+
+            <div class="paragraph_conception mt-5 mb-5">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, illum tenetur possimus elige Nostrum, illum tenetur possimus elige</p>
+                <p>ndi dolorum, corporis doloremque doloribus harum temporibus iste molestias illo. Facilis excepturi laboriosam</p>
+            </div>
+
+            <div class="button_conception switchDarkMode">
+                <p class="mb-0">Texte de support pour la question</p>
+                <button type="button" class="btn btnDefault">Voir plus</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="dividerFooterBody"></div>
+
+    <div class="discoverUsContainer">
+        <h1><strong>Découvrez nos derniers<br>projets & cas d'études</strong></h1>
+        <div class="disoverCardsContainer">
+            <div class="card discoverCard">
+                <img src="https://picsum.photos/id/600/500/600">
+                <div class="discoverTextContainer">
+                    <p class="discoverTitle"><strong>Je suis un projet</strong></p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <button type="button" class="btn btnDefault">Voir plus</button>
+                </div>
+            </div>
+            <div class="card discoverCard">
+                <img src="https://picsum.photos/id/700/500/600">
+                <div class="discoverTextContainer">
+                    <p  class="discoverTitle"><strong>Je suis un projet</strong></p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <button type="button" class="btn btnDefault">Voir plus</button>
+                </div>
+            </div>
+            <div class="card discoverCard">
+                <img src="https://picsum.photos/id/400/500/600">
+                <div class="discoverTextContainer">
+                    <p  class="discoverTitle"><strong>Je suis un projet</strong></p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <button type="button" class="btn btnDefault">Voir plus</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

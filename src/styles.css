@@ -1,1 +1,99 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+:root{
+    --darkmode: rgba(0,0,0,0.9);
+
+}    
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Rubik'; }
+
+body.darkMode{
+    background-color: var(--darkmode);
+}
+
+body:not(.darkMode) p,
+body:not(.darkMode) h4,
+body:not(.darkMode) h3,
+body:not(.darkMode) h2,
+body:not(.darkMode) h1,
+body:not(.darkMode) label,
+body:not(.darkMode) li a{
+    color: #120B6D;
+}
+
+body{
+    transition: background .5s;
+}
+
+body.darkMode .card,
+body.darkMode mat-expansion-panel,
+body.darkMode .form_left,
+body.darkMode .switchDarkMode{
+    background: var(--darkmode)!important;
+}
+
+body.darkMode .expansionSelected{
+    background: firebrick!important;
+}
+
+body.darkMode p,
+body.darkMode h4,
+body.darkMode h3,
+body.darkMode h2,
+body.darkMode h1,
+body.darkMode li a,
+body.darkMode button,
+body.darkMode label,
+::placeholder
+{
+    color: white;
+}
+
+
+
+
+body.darkMode .logo{
+    filter:invert()
+}
+
+
+
+
+img{
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.centerContent{
+    width: clamp(700px, 80vw, 100%);
+    margin: 0 auto; 
+    padding: 20px;
+}
+
+.btnDefault{
+    color: white;
+    padding: 10px;
+    min-width: 120px;
+}
+
+.card {
+    margin-top: 40px;
+    min-height: 300px;
+    max-width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 35px;
+    border: 1px solid rgba(82, 82, 82, 0.363);
+    border-radius: 20px;
+    transition: 300ms; 
+    flex:1
+  }
+
+img{
+    object-fit: contain;
+}

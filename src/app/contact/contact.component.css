@@ -1,0 +1,45 @@
+
+.contactFormContainer{
+    display: flex;
+    height: 100vh;
+}
+.form_left{
+    background-color: #F6F5FC;
+    width: 55%;
+    padding:5%;
+}
+
+  
+.form_left p{
+    font-size: .8rem;
+}
+
+.form_right{
+    width: 45%;
+    height: 100%;
+}
+
+.form_right img {
+    height: 100%;
+}
+
+.customGroup{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 7%;
+}
+
+select,input,textarea{
+    background:transparent;
+}
+
+select{
+    padding:3%;
+}
+
+.btnSubmit{
+    background: #140B82;
+    color:white;
+    padding:2.5% 6%;
+}

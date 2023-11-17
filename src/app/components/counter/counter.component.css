@@ -1,0 +1,41 @@
+.sectionTitle{
+    display:flex;
+    align-items: center;
+    gap:5px;
+}
+
+.cardsFigures{
+    display:flex;
+    justify-content: space-between;
+}
+
+.cardContainer_figures{
+    min-height: 230px;
+    max-width: 31%;
+    padding-right: 10px;
+}
+.cardContainer_figures p{
+    font-size: calc(.6rem + .25vw);
+}
+
+.cardContainer_figures.info1{
+    background-color: #ff5e1a;
+}
+
+.cardContainer_figures.info2{
+    background-color: #24a640;
+}
+.cardContainer_figures.info3{
+    background-color: #00b0cc
+}
+
+.cardContainer_figures svg,
+.cardContainer_figures p
+{
+    color:white;
+}
+
+.cardContainer_figures .number p
+{
+    font-size: calc(1.275rem + 1.5vw);
+}

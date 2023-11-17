@@ -1,0 +1,112 @@
+<div class="contactFormContainer">
+    <div class="form_left">
+     
+
+        <h4><strong>Contactez-nous</strong></h4>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, ex.</p>
+
+
+        <form [formGroup]="form"   (ngSubmit)="onSubmit()">
+            <ng-container *ngIf="submitted">
+                <h5 class="text-success" *ngIf="form.valid">Le formulaire a bien été envoyé</h5>
+                <h5 class="text-danger" *ngIf="!form.valid">Le formulaire n'a pas pu être envoyé</h5>
+            </ng-container>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group customGroup">
+                        <select class="form-control" id="exampleFormControlSelect1" formControlName="subject">
+                            <option value="" disabled selected>Sujet de votre demande</option>
+                            <option value="demande formation">Demande d'intégration à nos formations</option>
+                            <option value="demande alternance">Demande de recherche d'alternance</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group customGroup">
+                        <label for="nom">Nom</label>
+                        <input type="text" formControlName="lastName" class="form-control" id="nom" placeholder="Votre nom">
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group customGroup">
+                        <label for="prenom">Prénom</label>
+                        <input type="text" formControlName="firstName" class="form-control" id="prenom" placeholder="Votre prénom">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group customGroup">
+                        <label for="email">Adresse mail</label>
+                        <input type="email" class="form-control" formControlName="email" id="email" placeholder="Votre adresse mail">
+                        <span class="text-danger"
+                        *ngIf="(registerFormControl.email.touched || submitted) && registerFormControl.email.errors">
+                        L'email n'est pas correct
+                    </span>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="form-group customGroup">
+                        <label for="tel">Téléphone</label>
+                        <input type="tel" class="form-control" formControlName="tel" id="tel" placeholder="Votre numéro de téléphone">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group customGroup">
+                        <label for="entreprise">Entreprise</label>
+                        <input type="text" class="form-control" id="entreprise" placeholder="Votre entreprise">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group customGroup">
+                        <label for="message">Laissez-nous un message</label>
+                        <textarea class="form-control" id="message"  formControlName="content" placeholder="Bonjour ..." rows="5"></textarea>
+                        <span class="text-danger"
+                        *ngIf="(registerFormControl.content.touched || submitted) && registerFormControl.content.errors">
+                        <span *ngIf="registerFormControl.content.errors.required">
+                            Laisser un message
+                        </span>
+                        <span *ngIf="registerFormControl.content.errors.minlength">
+                           Champs doit contenir au moins {{registerFormControl.content.errors.minlength.requiredLength}} caractères
+                        </span>
+
+                        <span *ngIf="registerFormControl.content.errors.maxlength">
+                            Champs ne doit pas contenir plus de {{registerFormControl.content.errors.maxlength.requiredLength}} caractères
+                         </span>
+                       
+                     </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="btnSubmitContainer btnDefault">
+                        <button type="submit" class="btn btnSubmit">Envoyer</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+        
+        </form>
+    </div>
+    <div class="form_right">
+        <img src="https://picsum.photos/id/1/1000/2000">
+    </div>
+</div>
