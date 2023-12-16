@@ -22,6 +22,7 @@ import { RulesComponent } from './components/rules/rules.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { OurActivitiesComponent } from './our-activities/our-activities.component';
 const routes: Routes = [
+  { path: '', component: AccueilComponent },
   {
       path: 'accueil',
       component:AccueilComponent,
