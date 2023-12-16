@@ -1,9 +1,9 @@
 <ng-template #contentCarsoussel>
-	<div class="textContainer">
-		<p class="title"><strong>Les 3 règles de la frugalité numérique</strong></p>
+	<div class="textContainer"  [style.background-color]="bannerColor || 'rgba(255, 94, 26, 0.7)'">
+		<p class="title"><strong>{{bannerText.title}}</strong></p>
 
 		<div class="contentContainer">
-			<p><small>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem asperiores, quas illum nesciunt ab soluta doloremque. Et debitis neque aspernatur.</small></p>
+			<p>{{bannerText.subTitle}}</p>
 			<button type="button" class="btn btnDefault">Voir plus</button>
 		</div>
 	</div>
@@ -19,3 +19,4 @@
 		</ng-template>
 	</ng-container>
 </ngb-carousel>
+

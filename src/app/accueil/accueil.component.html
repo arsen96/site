@@ -1,13 +1,15 @@
-<app-caroussel [images]="['https://picsum.photos/id/1/1900/1000','../../assets/second.jpg']" [options]="{'showNavigationArrows':true,'showNavigationIndicators':false}"></app-caroussel>
+<app-caroussel [images]="['https://picsum.photos/id/1/1900/1000','../../assets/second.jpg']"  [bannerText]="{title: 'Les 3 règles de la frugalité numérique',subTitle:'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem asperiores, quas illum nesciunt ab soluta doloremque. Et debitis neque aspernatur.'}"   [options]="{'showNavigationArrows':false,'showNavigationIndicators':false}" [options]="{'showNavigationArrows':true,'showNavigationIndicators':false}"></app-caroussel>
+
+
 <div class="addPadding">
     <div class="menuContainer">
-        <p>Flux documentaires</p>
-        <p>Studio de développement</p>
-        <p>L'atelier numérique</p>
-        <p>Livraison urbaine</p>
-        <p>Service postal</p>
-        <p>Conciergerie d'entreprise</p>
-        <p>Formations</p>
+        <p routerLink="/activities">Flux documentaires</p>
+        <p routerLink="/activities">Studio de développement</p>
+        <p routerLink="/activities">L'atelier numérique</p>
+        <p routerLink="/activities">Livraison urbaine</p>
+        <p routerLink="/activities">Service postal</p>
+        <p routerLink="/activities">Conciergerie d'entreprise</p>
+        <p routerLink="/activities">Formations</p>
     </div>
 
     <div class="bannerContainer">

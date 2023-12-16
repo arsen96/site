@@ -20,6 +20,7 @@ import { OurPaternshipsComponent } from './components/our-paternships/our-patern
 import { ContactComponent } from './contact/contact.component';
 import { RulesComponent } from './components/rules/rules.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { OurActivitiesComponent } from './our-activities/our-activities.component';
 const routes: Routes = [
   {
       path: 'accueil',
@@ -33,6 +34,7 @@ const routes: Routes = [
         },
       ],
   },
+  { path: 'missions', component: OurActivitiesComponent },
   { path: 'contact', component: ContactComponent },
 ];
 
@@ -49,7 +51,8 @@ const routes: Routes = [
     CounterComponent,
     OurPaternshipsComponent,
     ContactComponent,
-    RulesComponent
+    RulesComponent,
+    OurActivitiesComponent
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,8 @@ import { NgbPaginationModule, NgbAlertModule, NgbCarouselConfig,NgbCarousel } fr
 export class CarousselComponent implements AfterViewInit {
 
   @Input({ required: true }) images:Array<string>
+  @Input({ required: false }) bannerColor:string;
+  @Input({ required: true }) bannerText:{title:string;subTitle:string};
   @Input() options: { showNavigationArrows: boolean,showNavigationIndicators:boolean };
   showNavigationArrows = false;
 	showNavigationIndicators = false;

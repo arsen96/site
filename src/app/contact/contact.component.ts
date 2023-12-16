@@ -63,7 +63,8 @@ export class ContactComponent implements OnInit {
             this.submitted = false;
             this.form.value.firstName.value = "";
           }, 2000);
-          let res:any = data;
+
+          console.log("datadatadata",data)
         },
         err => {
           console.log(err);

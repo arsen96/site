@@ -71,7 +71,7 @@
                 <div class="col-sm">
                     <div class="form-group customGroup">
                         <label for="message">Laissez-nous un message</label>
-                        <textarea class="form-control" id="message"  formControlName="content" placeholder="Bonjour ..." rows="5"></textarea>
+                        <input class="form-control" id="message"  formControlName="content" placeholder="Bonjour ...">
                         <span class="text-danger"
                         *ngIf="(registerFormControl.content.touched || submitted) && registerFormControl.content.errors">
                         <span *ngIf="registerFormControl.content.errors.required">

@@ -35,9 +35,9 @@ ngb-caroussel{
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    background-color: rgba(255, 94, 26, 0.7);
     padding:5%;
     gap:10px;
+    text-transform: uppercase;
 }
 
 .textContainer p{
